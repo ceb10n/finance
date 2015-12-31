@@ -1,11 +1,11 @@
 {
     "Logging": {
-    "IncludeScopes": false,
-    "LogLevel": {
-      "Default": "Verbose",
-      "System": "Information",
-      "Microsoft": "Information"
-    }
+        "IncludeScopes": false,
+        "LogLevel": {
+        "Default": "Verbose",
+        "System": "Information",
+        "Microsoft": "Information"
+        }
     },
     "Data": {
         "ConnectionString": "Server=(localdb)\\ProjectsV12;Database=finance;Trusted_Connection=True;MultipleActiveResultSets=true"    

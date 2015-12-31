@@ -1,5 +1,5 @@
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -7,8 +7,22 @@ namespace finance
 {
     public class Startup
     {   
+        private readonly IConfigurationRoot _configuration;
+        
+        public Startup()
+        {
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("config.json");
+                
+            _configuration = builder.Build();
+        }
+        
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddConsole(_configuration.GetSection("Logging"));
+            
+            app.UseDeveloperExceptionPage();
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
