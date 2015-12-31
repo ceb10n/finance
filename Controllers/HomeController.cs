@@ -1,4 +1,3 @@
-using System;
 using Microsoft.AspNet.Mvc;
 
 namespace finance.Controllers
@@ -7,7 +6,6 @@ namespace finance.Controllers
     {
         public IActionResult Index()
         {
-            throw new Exception();
             return View();
         }
     }
