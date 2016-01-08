@@ -34,6 +34,6 @@
     "**.vspscc"
   ],
   "scripts": {
-    "postrestore": [ "bower install" ]
+    "postrestore": [ "npm install", "bower install" ]
   }
 }

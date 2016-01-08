@@ -1,0 +1,8 @@
+{
+  "name": "finance",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "3.8.11"
+  }
+}
