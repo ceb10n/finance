@@ -1,5 +1,16 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    clean = require('gulp-clean');
 
-gulp.task('min', function() {
-  
+
+var destination = "./wwwroot/lib";
+var source = "bower_components/**/*";
+
+gulp.task('clean', function() {
+     gulp.src(destination)
+        .pipe(clean());
+});
+
+gulp.task('copy', ['clean'], function() {
+    gulp.src(source)
+        .pipe(gulp.dest(destination));
 });
