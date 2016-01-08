@@ -32,5 +32,8 @@
   "publishExclude": [
     "**.user",
     "**.vspscc"
-  ]
+  ],
+  "scripts": {
+    "postrestore": [ "bower install" ]
+  }
 }
