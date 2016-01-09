@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Finance.Models;
+using Finance.Domain.Entities;
 using Microsoft.AspNet.Mvc;
 
 namespace Finance.Controllers
