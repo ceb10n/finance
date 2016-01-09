@@ -1,6 +1,6 @@
 using Microsoft.AspNet.Mvc;
 
-namespace finance.Controllers
+namespace Finance.Controllers
 {
     public class HomeController : Controller
     {
