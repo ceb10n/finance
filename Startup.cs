@@ -21,6 +21,8 @@ namespace finance
         {
             loggerFactory.AddConsole(_configuration.GetSection("Logging"));
             
+            app.UseStaticFiles();
+            
             app.UseDeveloperExceptionPage();
             
             app.UseMvc(routes =>

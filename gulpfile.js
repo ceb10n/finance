@@ -6,8 +6,8 @@ var destination = "./wwwroot/lib";
 var source = "bower_components/**/*";
 
 gulp.task('clean', function() {
-     gulp.src(destination)
-        .pipe(clean());
+     return gulp.src(destination)
+                .pipe(clean());
 });
 
 gulp.task('copy', ['clean'], function() {
