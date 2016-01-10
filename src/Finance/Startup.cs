@@ -1,9 +1,12 @@
+using Finance.Data.Repositories;
+using Finance.Domain.Contracts.Repositories;
 using Microsoft.AspNet.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Finance.Data.Context;
 
-namespace finance
+namespace Finance
 {
     public class Startup
     {   
@@ -36,6 +39,12 @@ namespace finance
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddEntityFramework()
+                    .AddSqlServer()
+                    .AddDbContext<FinanceContext>();
+
+            services.AddTransient<IBillRepository, BillRepository>();
         }
         
         static void Main(string[] args) => Microsoft.AspNet.Hosting.WebApplication.Run<Startup>(args);

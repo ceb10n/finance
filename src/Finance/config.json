@@ -1,13 +1,13 @@
 {
-    "Logging": {
-        "IncludeScopes": false,
-        "LogLevel": {
-        "Default": "Verbose",
-        "System": "Information",
-        "Microsoft": "Information"
-        }
-    },
-    "Data": {
-        "ConnectionString": "Server=(localdb)\\ProjectsV12;Database=finance;Trusted_Connection=True;MultipleActiveResultSets=true"    
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Verbose",
+      "System": "Information",
+      "Microsoft": "Information"
     }
+  },
+  "Data": {
+    "ConnectionString": "Initial Catalog=Finance;Data Source=LOCALHOST\\SQLEXPRESS;Persist Security Info=True;Integrated Security=true;MultipleActiveResultSets=True"
+  }
 }

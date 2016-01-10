@@ -4,18 +4,22 @@
     "emitEntryPoint": true
   },
   "tooling": {
-    "defaultNamespace": "finance"
+    "defaultNamespace": "Finance"
   },
 
   "dependencies": {
+    "AutoMapper": "4.1.1",
+    "Finance.Data": "",
+    "Finance.Domain": "",
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-    "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-final",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+    "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
-    "Finance.Domain": ""
+    "EntityFramework.Core": "7.0.0-rc1-final",
+    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final"
   },
 
   "commands": {
@@ -23,11 +27,10 @@
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { 
-        "dependencies": {
-            "Finance.Domain": ""
-        }
+    "dnx451": {
+      "dependencies": {
+        "Dapper": "1.9.0"
+      }
     }
   },
 
